@@ -83,4 +83,28 @@ input::-webkit-inner-spin-button {
   width: 20px;
 }
 
+.history {
+  display: flex;
+  height: 600px;
+  width: 414px;
+  background: #323232;
+}
+
+.history-us {
+  width: 50%;
+  height: 100%;
+  border-left: 1px solid white;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.history-them {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
 /*# sourceMappingURL=style.css.map */

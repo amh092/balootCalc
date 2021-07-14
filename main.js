@@ -10,12 +10,11 @@ var inputThem = document.getElementById("them");
 // record btn 
 var calcBtn = document.getElementById("calc");
 // this function will get the data from us input filed and save it to currentForUs var // 
-
+var usHistory = document.getElementById("history-them");
+var themHistory = document.getElementById("history-us");
 //  take the input value after user change the save to var 
 
-function checker (){
- 
-}
+
 
 
 calcBtn.addEventListener("click", function(){
@@ -28,10 +27,24 @@ calcBtn.addEventListener("click", function(){
     totalUs.innerText = parseInt(inputUs.value) + parseInt(totalUs.innerText)
     totalThem.innerText = parseInt(inputThem.value) + parseInt(totalThem.innerText)
 
+   
+     var last  =  document.createElement("h1");
+     var textLast =  document.createTextNode(parseInt(inputUs.value))
+    last.appendChild(textLast);
+    usHistory.appendChild(last);
+
+     var last2  =  document.createElement("h1");
+     var textLast2 =  document.createTextNode(parseInt(inputThem.value))
+    last2.appendChild(textLast2);
+    themHistory.appendChild(last2);
+
     inputUs.value = "";
     inputThem.value = "";
-     
+    
 })
 
+// to creat h1 text with the value input from user inside the history 
 
-  
+
+
+   
