@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&display=swap");
 body {
   width: 414px;
-  margin: 1px auto;
+  margin: 0px auto;
 }
 
 h1, p, li, a {
@@ -11,17 +11,30 @@ h1, p, li, a {
   color: white;
   font-family: "Aref Ruqaa", serif;
   font-weight: 200;
+  padding: 0;
+  margin: 0;
 }
 
 header {
   display: flex;
+  flex-flow: row wrap;
   align-content: center;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
   background: #323232;
   text-align: center;
   color: white;
   font-size: 20px;
+}
+
+button {
+  width: 48px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #aeb3cb;
+  border: none;
+  cursor: pointer;
+  margin: 20px 0 0 0;
 }
 
 .result {
@@ -105,6 +118,28 @@ input::-webkit-inner-spin-button {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+}
+
+.mode-switch-dark {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #f7f9ff;
+  z-index: 1000;
+  float: right;
+  left: 9px;
+  position: relative;
+  transition: 200ms;
+  color: #63687d;
+}
+
+.mode-switch {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 326px;
 }
 
 /*# sourceMappingURL=style.css.map */
