@@ -1,10 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
 body {
+
     width: 375px;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 h1,p,li,a {
     padding: 0;
     margin: 0;
+    color: white;
+    font-family: 'Aref Ruqaa', serif;
+  font-weight: 200;
 }
 
 header{
@@ -12,19 +19,22 @@ header{
     align-content: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(red,black);
+    background: #323232;
     text-align: center;
     color: white;
-    border-radius: 0px 0px 6px 6px ;
+    font-size: 20px;
+    
+    
 }
 
 .result {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    border: 1px solid beige;
+    background: #323232;
     text-align: center;
     transition: 2300ms;
+    padding: 10px 0 20px 0;
 }
 
 .result .us h1,
@@ -38,22 +48,29 @@ header{
     display: flex;
     flex-flow: row-reverse wrap;
     justify-content: space-evenly;
+    background: #323232;
+    padding: 0 0 20px 0 ;
 }
 
 .input-area input {
-    width: 40px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
     resize: none;
     text-align: center;
     appearance: none;
+    border-radius: 50%;
+    font-family: 'Aref Ruqaa', serif;
+    font-weight: 200;
+    
 }
 input{
-font-size: 30px;
+font-size: 18px;
+outline: none;
+border-radius: 6px;;
 }
 
 .calc-btn {
 
-border: 2px solid black;
 cursor: pointer;
 }
 .calc-btn h1 {
