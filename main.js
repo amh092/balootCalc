@@ -1,4 +1,5 @@
 'use strict';
+
 // us calcualtion 
 var totalUs = document.getElementById("us-total");
 var inputUs = document.getElementById("us");
@@ -12,13 +13,25 @@ var calcBtn = document.getElementById("calc");
 
 //  take the input value after user change the save to var 
 
+function checker (){
+ 
+}
+
 
 calcBtn.addEventListener("click", function(){
-    
-    
+    if (inputThem.value == ""){
+        inputThem.value = 0
+    }
+    if (inputUs.value == ""){
+        inputUs.value = 0
+    }
     totalUs.innerText = parseInt(inputUs.value) + parseInt(totalUs.innerText)
     totalThem.innerText = parseInt(inputThem.value) + parseInt(totalThem.innerText)
 
     inputUs.value = "";
     inputThem.value = "";
+     
 })
+
+
+  
