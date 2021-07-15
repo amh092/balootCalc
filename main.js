@@ -84,13 +84,18 @@
     inputUs.value = "";
     inputThem.value = "";
 
-    if (usHistory.lastChild.innerText == 0){
+    if (usHistory.lastChild.innerText == 0 && themHistory < 0){
 
         usHistory.lastChild.remove()
     }
-    if (themHistory.lastChild.innerText == 0){
+    if (themHistory.lastChild.innerText == 0 && usHistory < 0){
 
         themHistory.lastChild.remove()
+    }
+
+    if ( usHistory.lastChild.innerText == 0 && themHistory.lastChild.innerText == 0){
+      themHistory.lastChild.remove()
+      usHistory.lastChild.remove()
     }
 
     });
