@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&display=swap");
 body {
   width: 414px;
-  margin: 0px auto;
+  margin: 30px auto;
   background: #4B79A1;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #283E51, #0A2342);
@@ -145,14 +145,14 @@ input::-webkit-inner-spin-button {
 
 svg {
   position: absolute;
-  top: 230px;
+  top: 260px;
   left: 43%;
   cursor: pointer;
 }
 
 .new {
   position: absolute;
-  top: 100px;
+  top: 120px;
   left: 37%;
   padding: 0;
   margin: 0;

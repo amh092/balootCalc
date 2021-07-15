@@ -4,7 +4,7 @@
 body {
 
     width: 414px;
-    margin: 0px auto;
+    margin: 30px auto;
     background: #4B79A1;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #283E51, #0A2342);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #283E51, #0A2342); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -159,7 +159,7 @@ input::-webkit-inner-spin-button {
   svg  {
       position: absolute;
    
-    top: 230px;
+    top: 260px;
     left:43%;
     cursor: pointer;
 }
@@ -167,7 +167,7 @@ input::-webkit-inner-spin-button {
 .new {
     position: absolute;
    
-    top: 100px;
+    top: 120px;
     left: 37%;
     padding: 0;
     margin: 0;
