@@ -99,6 +99,7 @@
     }
 
     });
+// undo the result section 
 
    undo.addEventListener("click", function(){
 
@@ -120,6 +121,15 @@
      usHistory.lastChild.remove();}
      }
    })
+
+// new game 
+
+var newGame =  document.getElementById("new");
+
+newGame.addEventListener("click", function(){
+
+    location.reload();
+})
 /** switch button  */
 // var switchBtn = document.querySelector("button");
 // var bodyTag = document.querySelectorAll("body");
