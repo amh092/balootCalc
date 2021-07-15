@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&display=swap");
 body {
-  width: 414px;
+  width: 375px;
   margin: 0px auto;
+}
+
+.black-background {
+  background: #323232;
 }
 
 h1, p, li, a {
@@ -24,6 +28,7 @@ header {
   background: #323232;
   text-align: center;
   color: white;
+  width: 100%;
   font-size: 20px;
 }
 

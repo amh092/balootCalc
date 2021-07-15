@@ -1,59 +1,89 @@
 "use strict";
+// declaring variables starts 
 
-// us calcualtion
-var totalUs = document.getElementById("us-total");
-var inputUs = document.getElementById("us");
+  //us variables
+    var totalUs = document.getElementById("us-total");
+    var inputUs = document.getElementById("us");
 
-// Them calculation
-var totalThem = document.getElementById("them-total");
-var inputThem = document.getElementById("them");
-// record btn
-var calcBtn = document.getElementById("calc");
-// this function will get the data from us input filed and save it to currentForUs var //
-var usHistory = document.getElementById("history-them");
-var themHistory = document.getElementById("history-us");
-//  take the input value after user change the save to var
+  // Them calculation
+    var totalThem = document.getElementById("them-total");
+    var inputThem = document.getElementById("them");
+  // record btn
+    var calcBtn = document.getElementById("calc");
+  // this function will get the data from us input filed and save it to currentForUs var //
+    var usHistory = document.getElementById("history-them");
+    var themHistory = document.getElementById("history-us");
+// declaring variables ends  
 
-inputThem.addEventListener("input", function () {
-  if (inputThem.value > 9) {
-    if (inputUs.value == "") inputUs.focus();
-  }
-});
-inputUs.addEventListener("input", function () {
-  if (inputUs.value > 9) {
-    if (inputThem.value == "") inputThem.focus();
-  }
-});
+// this event listener will move the focus to other input field after user input any number higher than 9 
+  // them input field
+    inputThem.addEventListener("input", function () {
+    if (inputThem.value > 9) {
+      if (inputUs.value == "") inputUs.focus();
+    }
+   });
+  // us input field
+    inputUs.addEventListener("input", function () {
+    if (inputUs.value > 9) {
+      if (inputThem.value == "") inputThem.focus();
+    }
+    });
+// end of event listener 
 
-calcBtn.addEventListener("click", function () {
+// btn click for counting 
+  calcBtn.addEventListener("click", function () {
+    // the if condition is to avoid not a number 
+      if (inputThem.value == "") {
+        inputThem.value = 0;
+      }
+      if (inputUs.value == "") {
+        inputUs.value = 0;
+      }
+    // end if condition is to avoid not a number 
 
+    // to add the sum to the us and them total after parse integers  
+    totalUs.innerText = parseInt(inputUs.value) + parseInt(totalUs.innerText);
+    totalThem.innerText = parseInt(inputThem.value) + parseInt(totalThem.innerText);
 
-  if (inputThem.value == "") {
-    inputThem.value = 0;
-  }
-  if (inputUs.value == "") {
-    inputUs.value = 0;
-  }
-  totalUs.innerText = parseInt(inputUs.value) + parseInt(totalUs.innerText);
-  totalThem.innerText =
-    parseInt(inputThem.value) + parseInt(totalThem.innerText);
+    if (inputUs.value > 0) {
+      var last = document.createElement("h1");
+      var textLast = document.createTextNode(parseInt(inputUs.value));
+      last.appendChild(textLast);
+      usHistory.appendChild(last);
+    }
 
-if(inputUs.value > 0){
-  var last = document.createElement("h1");
-  var textLast = document.createTextNode(parseInt(inputUs.value));
-  last.appendChild(textLast);
-  usHistory.appendChild(last);
-}
-if(inputThem.value > 0){
-  var last2 = document.createElement("h1");
-  var textLast2 = document.createTextNode(parseInt(inputThem.value));
-  last2.appendChild(textLast2);
-  themHistory.appendChild(last2);
-}
-  inputUs.value = "";
-  inputThem.value = "";
-});
+    else{
+      var last = document.createElement("h1");
+      var textLast = document.createTextNode(0);
+      last.appendChild(textLast);
+      usHistory.appendChild(last);
+    }
 
+    if (inputThem.value > 0) {
+      var last2 = document.createElement("h1");
+      var textLast2 = document.createTextNode(parseInt(inputThem.value));
+      last2.appendChild(textLast2);
+      themHistory.appendChild(last2);
+    }
+
+    else{
+      var last2 = document.createElement("h1");
+      var textLast2 = document.createTextNode(0);
+      last2.appendChild(textLast2);
+      themHistory.appendChild(last2);
+    }
+
+    if (inputThem.value == "") {
+      inputThem.value = 0;
+    }
+    if (inputUs.value == "") {
+      inputUs.value = 0;
+    }
+    inputUs.value = "";
+    inputThem.value = "";
+
+    });
+// btn click for counting 
 // to creat h1 text with the value input from user inside the history
 
 /** switch button  */
@@ -97,4 +127,3 @@ if(inputThem.value > 0){
 //      overView.classList.toggle("white-text")
 
 // })
-
