@@ -20,13 +20,13 @@
 // this event listener will move the focus to other input field after user input any number higher than 9 
   // them input field
     inputThem.addEventListener("input", function () {
-    if (inputThem.value > 9) {
+    if (inputThem.value.length >= 2) {
       if (inputUs.value == "") inputUs.focus();
     }
    });
   // us input field
     inputUs.addEventListener("input", function () {
-    if (inputUs.value > 9) {
+    if (inputUs.value.length >= 2 ) {
       if (inputThem.value == "") inputThem.focus();
     }
     });
