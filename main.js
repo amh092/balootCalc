@@ -132,6 +132,9 @@ newGame.addEventListener("click", function(){
     totalThem.innerText = 0;
     totalUs.innerText = 0;
 
+    inputThem.value = 0;
+    inputUs.value = 0;
+
     if (usHistory.childElementCount > 0){
     while (usHistory.firstChild) {
       usHistory.removeChild(usHistory.firstChild)
