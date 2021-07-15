@@ -132,8 +132,8 @@ newGame.addEventListener("click", function(){
     totalThem.innerText = 0;
     totalUs.innerText = 0;
 
-    inputThem.value = 0;
-    inputUs.value = 0;
+    inputThem.value = "";
+    inputUs.value = "";
 
     if (usHistory.childElementCount > 0){
     while (usHistory.firstChild) {
