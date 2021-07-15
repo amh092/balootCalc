@@ -130,6 +130,13 @@ newGame.addEventListener("click", function(){
 
     location.reload();
 })
+
+usHistory.addEventListener("click", function(){
+  inputUs.focus()
+})
+themHistory.addEventListener("click", function(){
+  inputThem.focus()
+})
 /** switch button  */
 // var switchBtn = document.querySelector("button");
 // var bodyTag = document.querySelectorAll("body");

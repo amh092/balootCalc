@@ -38,12 +38,19 @@ button {
     width: 48px;
     height: 24px;
     border-radius: 12px;
-    background-color: #aeb3cb;
+    background-color: #fff;
     border: none;
     cursor: pointer;
     margin: 20px 0 0 0;
-    
   }
+
+button span {
+    display: block;
+    background: gray;
+    width: 50%;
+    height: 90%;
+    border-radius: 50%;
+}
 
 .result {
     display: flex;
@@ -138,28 +145,6 @@ input::-webkit-inner-spin-button {
     align-items: center;
 }
 
-.mode-switch-dark {
-    display: block;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background-color: #f7f9ff;
-    z-index: 1000;
-    float: right;
-    left: 9px;
-    position: relative;
-    transition: 200ms;
-    color: #63687d;
-  }
-
-  .mode-switch {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 326px;
-  }
- 
   svg  {
       position: absolute;
     top: 100px;
