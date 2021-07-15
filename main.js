@@ -98,6 +98,7 @@
       usHistory.lastChild.remove()
     }
 
+   
     });
 // undo the result section 
 
@@ -128,7 +129,19 @@ var newGame =  document.getElementById("new");
 
 newGame.addEventListener("click", function(){
 
-    location.reload();
+    totalThem.innerText = 0;
+    totalUs.innerText = 0;
+
+    if (usHistory.childElementCount > 0){
+    while (usHistory.firstChild) {
+      usHistory.removeChild(usHistory.firstChild)
+    }}
+
+    if (themHistory.childElementCount > 0) {
+    while (themHistory.firstChild) {
+      themHistory.removeChild(themHistory.firstChild)
+    }
+  }
 })
 
 usHistory.addEventListener("click", function(){
