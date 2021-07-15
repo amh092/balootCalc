@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
 body {
 
-    width: 375px;
+    width: 414px;
     margin: 0px auto;
 
 }
@@ -42,6 +42,7 @@ button {
     border: none;
     cursor: pointer;
     margin: 20px 0 0 0;
+    
   }
 
 .result {
@@ -78,6 +79,9 @@ button {
     border-radius: 50%;
     font-family: 'Aref Ruqaa', serif;
     font-weight: 200;
+    border-style: groove;
+    
+    box-shadow: 1px 1px 10px 1px inset gray;
     
 }
 input{
@@ -91,7 +95,9 @@ border-radius: 6px;;
 cursor: pointer;
 }
 .calc-btn h1 {
-    padding: 5px;
+  
+
+    font-size: 50px;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -152,3 +158,9 @@ input::-webkit-inner-spin-button {
     width: 326px;
   }
  
+  svg  {
+      position: absolute;
+    top: 100px;
+    left: 45%;
+    cursor: pointer;
+  }

@@ -1,6 +1,6 @@
 "use strict";
 // declaring variables starts 
-
+  
   //us variables
     var totalUs = document.getElementById("us-total");
     var inputUs = document.getElementById("us");
@@ -13,6 +13,8 @@
   // this function will get the data from us input filed and save it to currentForUs var //
     var usHistory = document.getElementById("history-them");
     var themHistory = document.getElementById("history-us");
+  // undo button 
+    var undo = document.getElementsByTagName("svg")[0];
 // declaring variables ends  
 
 // this event listener will move the focus to other input field after user input any number higher than 9 
@@ -82,10 +84,37 @@
     inputUs.value = "";
     inputThem.value = "";
 
-    });
-// btn click for counting 
-// to creat h1 text with the value input from user inside the history
+    if (usHistory.lastChild.innerText == 0){
 
+        usHistory.lastChild.remove()
+    }
+    if (themHistory.lastChild.innerText == 0){
+
+        themHistory.lastChild.remove()
+    }
+
+    });
+
+   undo.addEventListener("click", function(){
+
+    if (totalThem.innerHTML > 0 || totalUs.innerHTML > 0 ) {
+     // updating the result after undoing the result 
+     totalThem.innerHTML = parseInt(totalThem.innerHTML) - parseInt(themHistory.lastChild.innerHTML);
+     totalUs.innerHTML = parseInt(totalUs.innerHTML) - parseInt(usHistory.lastChild.innerHTML);
+     
+    if(totalUs.innerHTML == ""){
+      totalUs.innerHTML == 0
+    }
+    if(totalThem.innerHTML == ""){
+      totalThem.innerHTML == 0
+    }
+
+    if (themHistory.childElementCount > 0) {
+     themHistory.lastChild.remove();}
+     if( usHistory.childElementCount > 0 ) {
+     usHistory.lastChild.remove();}
+     }
+   })
 /** switch button  */
 // var switchBtn = document.querySelector("button");
 // var bodyTag = document.querySelectorAll("body");
