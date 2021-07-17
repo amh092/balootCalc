@@ -1,1 +1,206 @@
-@import url(https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&display=swap);body{width:414px;margin:30px auto;background:#4b79a1;background:-webkit-linear-gradient(to top,#283e51,#0a2342);background:linear-gradient(to top,#283e51,#0a2342);background:-olinear-gradient(to top,#283e51,#0a2342)}a,h1,li,p{padding:0;margin:0;color:#f5f5f5;font-family:"Aref Ruqaa",serif;font-weight:200;padding:0;margin:0}header{display:flex;flex-flow:row wrap;align-content:center;justify-content:space-around;text-align:center;text-align:center;color:#fff;width:100%;font-size:20px;z-index:1000}button{width:48px;height:24px;border-radius:12px;background-color:#fff;border:none;cursor:pointer;margin:20px 0 0 0}button span{display:block;background:gray;width:50%;height:90%;border-radius:50%}.result{display:flex;flex-flow:row wrap;justify-content:space-between;text-align:center;transition:2.3s;padding:10px 0 20px 0;z-index:1000;margin:0 0 50px 0}.result .them h1,.result .us h1{transition:2s;width:100px;font-size:40px}.input-area{display:flex;flex-flow:row-reverse wrap;justify-content:space-evenly;padding:0 0 20px 0}.input-area input{width:50px;height:50px;resize:none;text-align:center;appearance:none;border-radius:50%;font-family:"Aref Ruqaa",serif;font-weight:200;border-style:groove;color:#4b79a1;box-shadow:1px 1px 10px 1px inset gray;z-index:1000}input{font-size:18px;outline:0;border-radius:6px;z-index:1000}.calc-btn{cursor:pointer}.calc-btn h1{font-size:50px}input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}.back{height:20px;width:20px}.history{display:flex;height:600px;width:414px;z-index:1000}.history-us{width:50%;height:100%;border-left:1px solid #fff;display:flex;flex-flow:column wrap;align-items:center}.history-them{width:50%;height:100%;display:flex;flex-flow:column wrap;align-items:center}svg{position:absolute;top:260px;left:43%;cursor:pointer}.new{position:absolute;top:120px;left:37%;padding:0;margin:0;cursor:pointer;z-index:1000}.sky{position:absolute;width:414px;height:100vh}.stars{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;display:block;background:url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;z-index:-10}
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&display=swap");
+body {
+  width: 414px;
+  margin: 30px auto;
+  background: #4B79A1;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #283E51, #0A2342);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #283E51, #0A2342);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -olinear-gradient(to top, #283E51, #0A2342);
+}
+
+h1, p, li, a {
+  padding: 0;
+  margin: 0;
+  color: whitesmoke;
+  font-family: "Aref Ruqaa", serif;
+  font-weight: 200;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+  text-align: center;
+  color: white;
+  width: 100%;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+button {
+  width: 48px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  margin: 20px 0 0 0;
+}
+
+button span {
+  display: block;
+  background: gray;
+  width: 50%;
+  height: 90%;
+  border-radius: 50%;
+}
+
+.result {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  text-align: center;
+  transition: 2300ms;
+  padding: 10px 0 20px 0;
+  z-index: 1000;
+  margin: 0 0 50px 0;
+}
+
+.result .us h1,
+.result .them h1 {
+  transition: 2000ms;
+  width: 100px;
+  font-size: 40px;
+}
+
+.input-area {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-evenly;
+  padding: 0 0 20px 0;
+}
+
+.input-area input {
+  width: 50px;
+  height: 50px;
+  resize: none;
+  text-align: center;
+  appearance: none;
+  border-radius: 50%;
+  font-family: "Aref Ruqaa", serif;
+  font-weight: 200;
+  border-style: groove;
+  color: #4B79A1;
+  box-shadow: 1px 1px 10px 1px inset gray;
+  z-index: 1000;
+}
+
+input {
+  font-size: 18px;
+  outline: none;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.calc-btn {
+  cursor: pointer;
+}
+
+.calc-btn h1 {
+  font-size: 50px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.back {
+  height: 20px;
+  width: 20px;
+}
+
+.history {
+  display: flex;
+  height: 600px;
+  width: 414px;
+  z-index: 1000;
+}
+
+.history-us {
+  width: 50%;
+  height: 100%;
+  border-left: 1px solid white;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.history-them {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+svg {
+  position: absolute;
+  top: 260px;
+  left: 43%;
+  cursor: pointer;
+}
+
+.new {
+  position: absolute;
+  top: 120px;
+  left: 37%;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.sky {
+  position: absolute;
+  width: 414px;
+  height: 100vh;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index: -10;
+}
+
+@media screen and (min-width: 1200px) {
+  svg {
+    position: absolute;
+    top: 260px;
+    left: 49%;
+    cursor: pointer;
+  }
+
+  .new {
+    position: absolute;
+    top: 120px;
+    left: 47%;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1000;
+  }
+}
+/*****************************************
+Check out Nat's pen with animated SVG weather icons. 
+
+https://codepen.io/nsayenko/pen/JKzxdm/
+*******************************************/
+
+/*# sourceMappingURL=style.css.map */
