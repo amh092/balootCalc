@@ -1,21 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&display=swap");
 body {
-  width: 414px;
-  margin: 30px auto;
-  background: #4B79A1;
+  position: relative;
+  width: 25.875em;
+  margin: 1.875em auto;
+  background: #4b79a1;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #283E51, #0A2342);
+  background: -webkit-linear-gradient(to top, #283e51, #0a2342);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #283E51, #0A2342);
+  background: linear-gradient(to top, #283e51, #0a2342);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: -olinear-gradient(to top, #283E51, #0A2342);
+  background: -olinear-gradient(to top, #283e51, #0a2342);
 }
 
-h1, p, li, a {
+button {
+  position: absolute;
+  top: 4%;
+  left: 43%;
+  transform: translate(0%, 100%);
+}
+
+h1,
+p,
+li,
+a {
   padding: 0;
   margin: 0;
-  color: whitesmoke;
   font-family: "Aref Ruqaa", serif;
   font-weight: 200;
   padding: 0;
@@ -29,7 +39,6 @@ header {
   justify-content: space-around;
   text-align: center;
   text-align: center;
-  color: white;
   width: 100%;
   font-size: 20px;
   z-index: 1000;
@@ -58,7 +67,6 @@ button span {
   flex-flow: row wrap;
   justify-content: space-between;
   text-align: center;
-  transition: 2300ms;
   padding: 10px 0 20px 0;
   z-index: 1000;
   margin: 0 0 50px 0;
@@ -66,7 +74,6 @@ button span {
 
 .result .us h1,
 .result .them h1 {
-  transition: 2000ms;
   width: 100px;
   font-size: 40px;
 }
@@ -79,8 +86,8 @@ button span {
 }
 
 .input-area input {
-  width: 50px;
-  height: 50px;
+  width: 3.125em;
+  height: 3.125em;
   resize: none;
   text-align: center;
   appearance: none;
@@ -88,15 +95,15 @@ button span {
   font-family: "Aref Ruqaa", serif;
   font-weight: 200;
   border-style: groove;
-  color: #4B79A1;
+  color: #4b79a1;
   box-shadow: 1px 1px 10px 1px inset gray;
   z-index: 1000;
 }
 
 input {
-  font-size: 18px;
+  font-size: 1.125em;
   outline: none;
-  border-radius: 6px;
+  border-radius: 0.375em;
   z-index: 1000;
 }
 
@@ -105,7 +112,7 @@ input {
 }
 
 .calc-btn h1 {
-  font-size: 50px;
+  font-size: 3.125em;
 }
 
 input::-webkit-outer-spin-button,
@@ -115,21 +122,20 @@ input::-webkit-inner-spin-button {
 }
 
 .back {
-  height: 20px;
-  width: 20px;
+  height: 1.25em;
+  width: 1.25em;
 }
 
 .history {
   display: flex;
-  height: 600px;
-  width: 414px;
+  min-height: 37.5em;
+  width: 25.875em;
   z-index: 1000;
 }
 
 .history-us {
   width: 50%;
   height: 100%;
-  border-left: 1px solid white;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -145,7 +151,7 @@ input::-webkit-inner-spin-button {
 
 svg {
   position: absolute;
-  top: 260px;
+  top: 13.25em;
   left: 43%;
   cursor: pointer;
 }
@@ -162,8 +168,8 @@ svg {
 
 .sky {
   position: absolute;
-  width: 414px;
-  height: 100vh;
+  width: 25.875em;
+  min-height: 100vh;
 }
 
 .stars {
@@ -182,14 +188,14 @@ svg {
 @media screen and (min-width: 1200px) {
   svg {
     position: absolute;
-    top: 260px;
+    top: 16.25em;
     left: 49%;
     cursor: pointer;
   }
 
   .new {
     position: absolute;
-    top: 120px;
+    top: 7.5em;
     left: 47%;
     padding: 0;
     margin: 0;
@@ -198,9 +204,50 @@ svg {
   }
 }
 /*****************************************
-Check out Nat's pen with animated SVG weather icons. 
+  Check out Nat's pen with animated SVG weather icons. 
 
-https://codepen.io/nsayenko/pen/JKzxdm/
-*******************************************/
+  https://codepen.io/nsayenko/pen/JKzxdm/
+  *******************************************/
+.white-back {
+  background: white center;
+}
+
+.black-color {
+  color: black;
+}
+
+.gray-back {
+  background: gray;
+}
+
+.white-mode span {
+  position: relative;
+  left: -50%;
+  transition: 200ms ease-in;
+  background: white;
+}
+
+.black-mode span {
+  position: relative;
+  left: 10%;
+  transition: 200ms ease-in;
+  background: linear-gradient(blue, black);
+}
+
+.white-color {
+  color: white;
+}
+
+.left-border-black {
+  border-left: black 1px solid;
+}
+
+.left-border-white {
+  border-left: 1px solid white;
+}
+
+.undo path {
+  fill: black;
+}
 
 /*# sourceMappingURL=style.css.map */
