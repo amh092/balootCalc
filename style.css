@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&display=swap");
 body {
+  position: relative;
   width: 25.875em;
   margin: 1.875em auto;
   background: #4b79a1;
@@ -208,7 +209,7 @@ svg {
   https://codepen.io/nsayenko/pen/JKzxdm/
   *******************************************/
 .white-back {
-  background: rgba(255, 255, 255, 0.63) center;
+  background: white center;
 }
 
 .black-color {
